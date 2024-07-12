@@ -17,11 +17,11 @@ const options = {
     // `unshift()` documentation: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/unshift
     addPhoto: (state, action) => {
       //state.photos.unshift({ id: state.photos.length + 1, caption:"what's here" , imageUrl: action.payload });
-      const { url, caption } = action.payload;
+      const { imageUrl, caption } = action.payload;
       state.photos.push({
         id: state.photos.length + 1,
-        url,
-        caption
+        imageUrl,
+        caption,
       });
     },
 
